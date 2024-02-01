@@ -1,0 +1,15 @@
+---
+const {logo,cta_header, url_cta_header} = Astro.props 
+//console.log(logo)
+--- 
+
+<header class="w-full h-auto py-5">
+   <div class="row-header w-[90%] mx-auto max-w-[1140px] flex justify-between items-center h-auto">
+      <div class="logo w-[50%]">
+          <img src={logo.url} alt="" class=" w-[110px] md:w-[150px]">
+      </div>
+        <div class="cta w-[50%} bg-[#b89f69] py-1 px-3  md:py-3 md:px-5 shadow-md">
+            <a href={url_cta_header} class="flex justify-center"><span class="text-white uppercase text-[12px] md:text-[14px]">{cta_header}</span></a>
+        </div>
+   </div>
+</header>

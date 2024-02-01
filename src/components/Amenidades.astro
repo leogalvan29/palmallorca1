@@ -1,0 +1,39 @@
+---
+const {titulo_amenidades, casa_club, titulo_casaclub, piscina, titulo_piscina, area_comun,titulo_area_comun , pavimento, titulo_pavimento, cableado,titulo_cableado, iluminacion, titulo_iluminacion, estacionamiento,titulo_estacionamiento} = Astro.props
+---
+
+<div class="amenidades w-full h-auto py-[50px]">
+      <h3 class="text-center text-4xl m-5">{titulo_amenidades}</h3>
+    <div class="row-amenidades w-[90%] mx-auto max-w-[1140px] flex flex-col items-center justify-between md:grid md:grid-cols-4 md:justify-items-center  h-auto">
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%] h-[200px] ">
+            <img src={casa_club.url} alt={titulo_casaclub} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_casaclub}</h4>
+        </div>
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%] h-[200px]">
+            <img src={piscina.url} alt={titulo_piscina} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_piscina}</h4>
+        </div>
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%]  h-[200px]">
+            <img src={area_comun.url} alt={titulo_area_comun} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_area_comun}</h4>
+        </div>
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%]  h-[200px]">
+            <img src={pavimento.url} alt={titulo_pavimento} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_pavimento}</h4>
+        </div>
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%]  h-[200px]">
+            <img src={cableado.url} alt={titulo_cableado} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_cableado}</h4>
+        </div>
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%]  h-[200px]">
+            <img src={iluminacion.url} alt={titulo_iluminacion} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_iluminacion}</h4>
+        </div> 
+        <div class="col-amenidad flex flex-col justify-around items-center w-[90%] md:w-[25%]  h-[200px]">
+            <img src={estacionamiento.url} alt={titulo_estacionamiento} class="w-[120px]">
+             <h4 class="text-[22px] text-3xl mt-2">{titulo_estacionamiento}</h4>
+        </div>
+    </div>
+   
+ 
+</div>

@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Seccion1 from '../components/Seccion1.astro' 
+import Modelos from '../components/Modelos.astro'; 
+import Galeria from '../components/Galeria.astro';
+import Amenidades from '../components/Amenidades.astro';
+import Footer from '../components/Footer.astro';
+
+const URL = import.meta.env.API_URL
+const data = await fetch(URL)
+const datos = await data.json() 
+//console.log(datos) 
+
+const {logo,cta_header,url_cta_header} = datos[0].acf 
+const {descripcion_1, descripcion_resaltado_1, cta_1, url_cta_1, categoria, texto_categoria, ubicacion,texto_ubicacion, img_1} = datos[0].acf 
+const {titulo_modelos, malaga, img_malaga, almeria, almeria_img, almeria_2, almeria_2_img }  = datos[0].acf 
+const {titulo_galeria, imagen_galeria} = datos[0].acf 
+const {titulo_amenidades, casa_club, titulo_casaclub, piscina, titulo_piscina, area_comun,titulo_area_comun , pavimento, titulo_pavimento, cableado,titulo_cableado, iluminacion, titulo_iluminacion, estacionamiento,titulo_estacionamiento} = datos[0].acf
+---
+
+<Layout title="Welcome to Astro.">
+	<Header 
+	  logo={logo} 
+	  cta_header={cta_header}
+	  url_cta_header={url_cta_header}
+	/>
+	<Seccion1 
+	  descripcion_1={descripcion_1}
+	  descripcion_resaltado_1={descripcion_resaltado_1}
+	  cta_1={cta_1}
+	  url_cta_1={url_cta_1}
+	  categoria={categoria}
+	  texto_categoria={texto_categoria}
+	  ubicacion={ubicacion}
+	  texto_ubicacion={texto_ubicacion}
+	  img_1={img_1}
+	/>
+	<Modelos 
+	  titulo_modelos={titulo_modelos}
+	  malaga={malaga}
+	  img_malaga={img_malaga}
+	  almeria={almeria}
+	  almeria_img={almeria_img}
+	  almeria_2={almeria_2}
+	  almeria_2_img={almeria_2_img}
+	/>
+	<Galeria 
+	  titulo_galeria={titulo_galeria}
+	  imagen_galeria={imagen_galeria}
+	/>
+	<Amenidades 
+	  titulo_amenidades={titulo_amenidades}
+	  casa_club={casa_club}
+	  titulo_casaclub={titulo_casaclub}
+	  piscina={piscina}
+	  titulo_piscina={titulo_piscina}
+	  area_comun={area_comun}
+	  titulo_area_comun={titulo_area_comun}
+	  pavimento={pavimento}
+	  titulo_pavimento={titulo_pavimento}
+	  cableado={cableado}
+	  titulo_cableado={titulo_cableado}
+	  iluminacion={iluminacion}
+	  titulo_iluminacion={titulo_iluminacion}
+	  estacionamiento={estacionamiento}
+	  titulo_estacionamiento={titulo_estacionamiento}
+
+	/>
+	<Footer/>
+</Layout> 
+
+<style>
+	
+</style> 
+   

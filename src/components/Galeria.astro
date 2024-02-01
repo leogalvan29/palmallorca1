@@ -1,0 +1,25 @@
+---
+const {titulo_galeria, imagen_galeria} = Astro.props
+---
+
+<div class="contenedor-galeria w-full h-auto py-[50px]">
+      <h2 class="text-center text-4xl py-3 m-5 text-[#b89f69] uppercase">{titulo_galeria}</h2>
+    <div class="row-galeria w-[90%] mx-auto max-w-[1140px]">
+          <div class="contenedor-img-galeria">
+            <img src={imagen_galeria.url} alt="">
+          </div>
+          
+    </div>
+</div>
+
+<style>
+    .contenedor-img-galeria{
+        border: 1px solid black;
+    }
+
+    .contenedor-img-galeria img{
+        position: relative;
+        bottom: 15px;
+        left: 15px;
+    }
+</style> 

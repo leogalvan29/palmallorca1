@@ -1,0 +1,30 @@
+---
+const {titulo_modelos, malaga, img_malaga, almeria, almeria_img, almeria_2, almeria_2_img } = Astro.props
+
+
+
+---
+
+<div class="section-modelos w-full py-10 mt-5">
+      <h3 class="uppercase text-center text-white text-4xl mb-5">{titulo_modelos}</h3>
+    <div class="row-modelos w-[90%] mx-auto max-w-[1140px] flex flex-col justify-center md:flex-row md:justify-between">
+        <div class="col-modelo flex flex-col items-center">
+            <img src={img_malaga.url} alt="">
+            <h3 class="text-center text-white mt-3 text-[20px] uppercase">{malaga}</h3>
+        </div>
+        <div class="col-modelo flex flex-col items-center">
+            <img src={almeria_img.url} alt="">
+            <h3 class="text-center text-white mt-3 text-[20px] uppercase">{almeria}</h3>
+        </div>
+        <div class="col-modelo flex flex-col items-center">
+            <img src={almeria_2_img.url} alt="">
+            <h3 class="text-center text-white mt-3 text-[20px] uppercase ">{almeria_2}</h3>
+        </div>
+    </div>
+</div> 
+
+<style>
+    .section-modelos{
+        background-image: url('https://www.desarrollostiva.com/wp-content/uploads/2023/12/01_Fondo-Modelos.png');
+    }
+</style>
