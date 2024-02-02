@@ -8,8 +8,8 @@ import Galeria from '../components/Galeria.astro';
 import Amenidades from '../components/Amenidades.astro';
 import Footer from '../components/Footer.astro';
 
-const URL = import.meta.env.API_URL
-const data = await fetch(URL)
+// const URL = import.meta.env.API_URL
+const data = await fetch('https://www.desarrollostiva.com/wp-json/wp/v2/palmallorca?acf_format=standard')
 const datos = await data.json() 
 //console.log(datos) 
 
